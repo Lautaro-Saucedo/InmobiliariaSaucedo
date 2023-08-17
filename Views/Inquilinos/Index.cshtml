@@ -1,1 +1,10 @@
-inquilinos home
+@{
+    var lista = ViewData["lista"] as List<Inquilino>;
+}
+
+@foreach (var i in lista){
+    <li>@i.Id</li>
+    <li>@i.Dni</li>
+    <li>@i.Nombre</li>
+    <li>@i.Apellido</li>
+}
