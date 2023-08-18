@@ -17,8 +17,8 @@ public class PropietariosController : Controller
     public IActionResult Index()
     {
         RepositorioPropietario rp = new RepositorioPropietario(config);
-        //var lista = ri.ObtenerTodos();
-        //lista.ForEach(o => Console.WriteLine(o.Dni));
+        var lista = rp.ObtenerTodos();
+        ViewData["lista"] = lista;
         return View();
     }
 }
