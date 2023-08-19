@@ -22,6 +22,9 @@
                 <td>@i.Dni</td>
                 <td>@i.Telefono</td>
                 <td>@i.Email</td>
+                <td><a asp-action="Borrar" asp-route-id=@i.Id>Borrar</a></td>
+                <td><a asp-action="Ver" asp-route-id=@i.Id>Ver</a></td>
+                <td><a asp-action="Editar" asp-route-id=@i.Id>Editar</a></td>
             </tr>
         }
     </tbody>

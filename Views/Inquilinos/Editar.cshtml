@@ -1,0 +1,25 @@
+@model InmobiliariaSaucedo.Models.Inquilino
+<form action="/Inquilinos/EditarPost" method="POST">
+    <div class="form-group">
+        <label for="Nombre">Nombre</label>
+        <input type="text" name="Nombre" class="form-control" value=@Model.Nombre required>
+    </div>
+    <div class="form-group">
+        <label for="Apellido">Apellido</label>
+        <input type="text" name="Apellido" class="form-control" value=@Model.Apellido required>
+    </div>
+    <div class="form-group">
+        <label for="Dni">DNI</label>
+        <input type="number" name="Dni" class="form-control" value=@Model.Dni required>
+    </div>
+    <div class="form-group">
+        <label for="Telefono">Telefono</label>
+        <input type="number" name="Telefono" class="form-control" value=@Model.Telefono required>
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" name="Email" class="form-control" value=@Model.Email required>
+    </div>
+    <button action="submit" class="btn btn-primary">Editar</button>
+    <input type="number" name="Id" value=@Model.Id style="display:none">
+</form>

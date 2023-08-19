@@ -62,7 +62,7 @@ public class RepositorioInquilino{
             var sql = @"INSERT INTO inquilinos 
                 (Dni,Nombre,Apellido,Telefono,Email)
                 VALUES (@Dni,@Nombre,@Apellido,@Telefono,@Email);
-                LAST_INSERT_ID();";
+                SELECT LAST_INSERT_ID();";
             using(MySqlCommand cmd = new MySqlCommand(sql,conn)){
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@Dni",i.Dni);
